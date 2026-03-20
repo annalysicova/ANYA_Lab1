@@ -12,7 +12,6 @@ public class XMLParser implements Parser{
         Mission mission = mapper.readValue(new File("src/main/resources/Mission A.xml"), Mission.class);
 
         System.out.println(mission);
-        System.out.println(mission.getOutcome());
 
         return null;
     }

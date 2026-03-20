@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.List;
+
 public class Mission{
     String missionId;
     String date;
@@ -7,7 +9,24 @@ public class Mission{
     int damageCost;
     Curse curse;
 
+    List<Sorcerer> sorcerers;
+    List<Technique> techniques;
 
+    public List<Sorcerer> getSorcerers() {
+        return sorcerers;
+    }
+
+    public void setSorcerers(List<Sorcerer> sorcerers) {
+        this.sorcerers = sorcerers;
+    }
+
+    public List<Technique> getTechniques() {
+        return techniques;
+    }
+
+    public void setTechniques(List<Technique> techniques) {
+        this.techniques = techniques;
+    }
 
     public Curse getCurse() {
         return curse;
@@ -56,6 +75,8 @@ public class Mission{
                 "date: " + date + "\n" +
                 "outcome : " + outcome + "\n" +
                 "damage cost: " + damageCost + "\n" +
-                "curse: " + curse;
+                "curse: " + curse +
+                "\n\nsorcerers:\n " + sorcerers +
+                "\n\ntechniques\n" + techniques;
     }
 }
