@@ -6,13 +6,10 @@ import java.io.File;
 
 public class XMLParser implements Parser{
 
-    public Mission parse()
+    @Override
+    public Mission parse(File file)
     {
         XmlMapper mapper = new XmlMapper();
-        Mission mission = mapper.readValue(new File("src/main/resources/Mission A.xml"), Mission.class);
-
-        System.out.println(mission);
-
-        return null;
+        return mapper.readValue(file, Mission.class);
     }
 }

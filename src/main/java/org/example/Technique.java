@@ -3,7 +3,7 @@ package org.example;
 public class Technique {
     String name;
     String type;
-    String owner; //TODO Add owner instead
+    String owner;
     int damage;
 
     public String getName() {

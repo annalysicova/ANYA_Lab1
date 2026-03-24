@@ -5,6 +5,21 @@ import java.util.List;
 public class Mission{
     String missionId;
     String date;
+    String location;
+    String comment = "";
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     String outcome;
     int damageCost;
     Curse curse;
@@ -73,10 +88,12 @@ public class Mission{
     {
         return "missionId: " + missionId + "\n" +
                 "date: " + date + "\n" +
+                "location: " + location + "\n" +
                 "outcome : " + outcome + "\n" +
                 "damage cost: " + damageCost + "\n" +
                 "curse: " + curse +
                 "\n\nsorcerers:\n " + sorcerers +
-                "\n\ntechniques\n" + techniques;
+                "\n\ntechniques\n" + techniques +
+                "\n" + comment;
     }
 }
