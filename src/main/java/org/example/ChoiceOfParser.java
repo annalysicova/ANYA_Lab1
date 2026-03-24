@@ -4,7 +4,6 @@ import tools.jackson.core.exc.JacksonIOException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class ChoiceOfParser {
     public static Mission parse(File file)
