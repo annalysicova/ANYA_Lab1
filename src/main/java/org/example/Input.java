@@ -7,6 +7,7 @@ public class Input {
     public static File input()
     {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Введите путь до файла");
 
         String temp = scanner.nextLine();
