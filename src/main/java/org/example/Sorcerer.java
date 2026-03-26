@@ -21,8 +21,7 @@ public class Sorcerer {
     }
 
     @Override
-    public String toString()
-    {
-        return name + "\n" + rank;
+    public String toString() {
+        return "Name: " + name + ", Rank: " + rank;
     }
 }

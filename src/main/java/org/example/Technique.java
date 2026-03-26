@@ -40,7 +40,10 @@ public class Technique {
 
     @Override
     public String toString() {
-        return "Name: " + name + "\nType: " + type + "\nOwner: " + owner + "\nDamage: " + damage;
+        return "Name: " + name +
+                ", Type: " + type +
+                ", Owner: " + owner +
+                ", Damage: " + damage;
     }
 
 }

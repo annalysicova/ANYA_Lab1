@@ -84,16 +84,23 @@ public class Mission{
     }
 
     @Override
-    public String toString()
-    {
-        return "missionId: " + missionId + "\n" +
-                "date: " + date + "\n" +
-                "location: " + location + "\n" +
-                "outcome : " + outcome + "\n" +
-                "damage cost: " + damageCost + "\n" +
-                "curse: " + curse +
-                "\n\nsorcerers:\n " + sorcerers +
-                "\n\ntechniques\n" + techniques +
-                "\n" + comment;
+    public String toString() {
+        String result =
+                "\n=== Mission Report ===\n" +
+                        "ID: " + missionId + "\n" +
+                        "Date: " + date + "\n" +
+                        "Location: " + location + "\n" +
+                        "Outcome: " + outcome + "\n" +
+                        "Damage Cost: " + damageCost + "\n\n" +
+                        "Curse:\n  " + curse + "\n\n" +
+                        "Sorcerers:\n";
+
+        for (Sorcerer s : sorcerers) { result += "  - " + s + "\n"; }
+
+        result += "\nTechniques:\n";
+        for (Technique t : techniques) { result += "  - " + t + "\n"; }
+
+        result += comment.isEmpty() ? "" : "\nComment:\n  " + comment + "\n";
+        return result;
     }
 }

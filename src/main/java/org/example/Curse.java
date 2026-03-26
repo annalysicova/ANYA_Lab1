@@ -22,6 +22,6 @@ public class Curse {
 
     @Override
     public String toString() {
-        return name + " " + threatLevel;
+        return "Name: " + name + ", Threat Level: " + threatLevel;
     }
 }
